@@ -1,5 +1,5 @@
-import Vue from 'vue';
 import vfjsBusEventActions from './actions';
+import Events from './events';
 
 const vfjsBus = {
   addVfjsListener(event, callback) {
@@ -18,7 +18,7 @@ const vfjsBus = {
     this.vfjsBus.$off();
   },
   vfjsBusInitialize() {
-    this.vfjsBus = new Vue();
+    this.vfjsBus = new Events();
   },
   vfjsBusEventHandler(event, payload) {
     if (event && event in vfjsBusEventActions) {
