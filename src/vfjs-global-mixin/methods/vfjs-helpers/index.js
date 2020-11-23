@@ -104,7 +104,7 @@ const vfjsHelpers = {
           key: props.vfjsFieldId,
           ...props.vfjsFieldOptions,
         },
-        children,
+        () => children,
       );
     }
 
@@ -118,7 +118,7 @@ const vfjsHelpers = {
         ...props,
         vfjsComponent: localComponent || component,
       },
-      children,
+      () => children,
     );
   },
   vfjsHelperApplyFieldModel(key, value) {
