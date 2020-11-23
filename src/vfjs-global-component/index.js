@@ -3,7 +3,7 @@ import vfjsGlobalMixin from '../vfjs-global-mixin';
 
 const VueFormJsonSchema = {
   name: 'vue-form-json-schema',
-  mixins: [vfjsGlobalMixin],
+  ...vfjsGlobalMixin,
   render() {
     const createElement = h || window.Vue.h || this.$createElement;
 
