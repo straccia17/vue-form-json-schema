@@ -14,7 +14,7 @@ const vfjsFieldMixin = {
   mounted() {
     this.vfjsFieldHelperAddListener(this.$el, 'blur');
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.vfjsFieldHelperRemoveListener(this.$el, 'blur');
   },
 };

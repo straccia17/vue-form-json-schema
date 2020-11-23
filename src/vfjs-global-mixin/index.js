@@ -13,7 +13,7 @@ const vfjsGlobalMixin = {
   created() {
     this.vfjsInitialize();
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.vfjsDestroy();
   },
   computed,
