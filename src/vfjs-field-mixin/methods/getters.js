@@ -59,8 +59,8 @@ const getters = {
 
     const computedOptions = {
       class: classFormatted,
-      on: onFormatted,
-      nativeOn: !isEmpty(nativeOnFormatted) ? nativeOnFormatted : undefined,
+      ...onFormatted,
+      ...!isEmpty(nativeOnFormatted) ? nativeOnFormatted : undefined,
     };
 
     const defaultProps = Object.assign(
@@ -73,10 +73,8 @@ const getters = {
     const fieldOptionsAsProps = { props: options };
 
     const valueProp = {
-      props: {
-        [this.vfjsFieldValueProp]:
-          this.vfjsFieldValueModel || this.vfjsFieldModel,
-      },
+      [this.vfjsFieldValueProp]:
+        this.vfjsFieldValueModel || this.vfjsFieldModel,
     };
 
     const allAttributes = merge(
