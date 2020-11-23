@@ -1,3 +1,4 @@
+import { h } from 'vue';
 import { isEmpty, merge } from 'lodash';
 
 const getters = {
@@ -9,8 +10,9 @@ const getters = {
   },
   getVfjsChildren() {
     const { default: defaultSlot, ...slots } = this.$slots;
+    const createElement = h || window.Vue.h || this.$createElement;
     const namedSlots = Object.keys(slots).map((key) => [
-      this.$createElement(
+      createElement(
         'template',
         {
           slot: key,

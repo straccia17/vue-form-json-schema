@@ -1,3 +1,4 @@
+import { h } from 'vue';
 import { set, cloneDeep, merge } from 'lodash';
 import vfjsFieldComponent from '../../../vfjs-field-component';
 
@@ -94,9 +95,10 @@ const vfjsHelpers = {
     // If the component matches one of the local components
     // passed in with the `components` prop
     const localComponent = this.vfjsComponents[component];
+    const createElement = h || window.Vue.h || this.$createElement;
 
     if (!props.vfjsFieldModelKey) {
-      return this.$createElement(
+      return createElement(
         localComponent || component,
         {
           key: props.vfjsFieldId,
@@ -108,7 +110,7 @@ const vfjsHelpers = {
 
     const { slot } = props.vfjsFieldOptions;
 
-    return this.$createElement(
+    return createElement(
       vfjsFieldComponent,
       {
         key: `${props.key || props.vfjsFieldId}-wrapper`,
