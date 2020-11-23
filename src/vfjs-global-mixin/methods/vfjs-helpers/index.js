@@ -115,10 +115,8 @@ const vfjsHelpers = {
       {
         key: `${props.key || props.vfjsFieldId}-wrapper`,
         slot,
-        props: {
-          ...props,
-          vfjsComponent: localComponent || component,
-        },
+        ...props,
+        vfjsComponent: localComponent || component,
       },
       children,
     );
