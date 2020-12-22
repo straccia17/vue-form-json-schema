@@ -1,4 +1,4 @@
-import { isEmpty, merge } from 'lodash';
+import { isEmpty, merge } from 'lodash-es';
 
 const getters = {
   getVfjsAttributes() {

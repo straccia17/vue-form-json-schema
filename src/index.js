@@ -4,6 +4,8 @@ import vfjsGlobalMixin from './vfjs-global-mixin';
 import vfjsGlobal from './vfjs-global-component';
 import vfjsPlugin from './plugin';
 
+export default vfjsGlobal;
+
 export {
   vfjsField,
   vfjsFieldMixin,
@@ -11,5 +13,3 @@ export {
   vfjsGlobalMixin,
   vfjsPlugin,
 };
-
-export default vfjsGlobal;

@@ -1,4 +1,4 @@
-import { get, isEqual, set } from 'lodash';
+import { get, isEqual, set } from 'lodash-es';
 import {
   VFJS_EVENT_FIELD_MODEL_CLEAR_HIDDEN,
   VFJS_EVENT_FIELD_MODEL_UPDATE,

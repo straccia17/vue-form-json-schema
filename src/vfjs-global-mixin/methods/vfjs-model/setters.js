@@ -1,4 +1,4 @@
-import { cloneDeep, isEqual } from 'lodash';
+import { cloneDeep, isEqual } from 'lodash-es';
 import {
   VFJS_EVENT_FIELD_MODEL_UPDATE,
   VFJS_EVENT_MODEL_VALIDATE,

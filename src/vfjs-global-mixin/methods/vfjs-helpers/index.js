@@ -1,4 +1,4 @@
-import { set, cloneDeep, merge } from 'lodash';
+import { set, cloneDeep, merge } from 'lodash-es';
 import vfjsFieldComponent from '../../../vfjs-field-component';
 
 const vfjsHelpers = {
